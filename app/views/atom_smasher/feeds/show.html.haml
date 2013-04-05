@@ -1,0 +1,15 @@
+.large-9.push-3.columns
+
+  %h2= @feed.title
+
+  .section-container.accordion{data: {section: "accordion"}}
+    - @feed.posts.each do |post|
+      %section.section
+        %p.title= link_to post.title, "#"
+        .content
+          %p
+            = post.content
+
+
+
+

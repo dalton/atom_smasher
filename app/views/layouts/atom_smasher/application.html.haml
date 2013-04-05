@@ -1,0 +1,18 @@
+%head
+  %title AtomSmasher
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+%body
+  .row
+    = yield
+    - if @feeds
+      .large-3.pull-9.columns
+        %ul.side-nav
+          - @feeds.each do |feed|
+            %li
+              = link_to feed.title, feed
+          %li= link_to "subscribe", new_feed_path
+
+  %script
+    $(document).foundation();
