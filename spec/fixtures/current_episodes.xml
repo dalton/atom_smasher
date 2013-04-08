@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ASCIIcasts - Latest Episodes</title>
+    <description>The latest episodes from ASCIIcasts</description>
+    <link>http://asciicasts.com/</link>
+    <pubDate>Tue, 01 Jan 2013 20:18:26 +0000</pubDate>
+    <ttl>1440</ttl>
+    <item>
+      <title>Importing CSV and Excel</title>
+      <description>Allow users to import records into the database by uploading a CSV or Excel document. Here we show how to use Roo to parse these files and present a solution for validations</description>
+      <pubDate>Tue, 01 Jan 2013 20:17:50 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/396-importing-csv-and-excel</guid>
+      <link>http://asciicasts.com/episodes/396-importing-csv-and-excel</link>
+    </item>
+    <item>
+      <title>Guest User Record</title>
+      <description>Instead of presenting a sign up form to the user, consider creating a temporary guest record so the user can try out the application without filling in their information up front. They can then become a permanent member afterwards</description>
+      <pubDate>Sun, 16 Dec 2012 19:37:35 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/393-guest-user-record</guid>
+      <link>http://asciicasts.com/episodes/393-guest-user-record</link>
+    </item>
+    <item>
+      <title>Turbolinks</title>
+      <description>Turbolinks can make your Rails app feel faster by using JavaScript to replace the page content when clicking a link. It will be default in new Rails 4.0 applications, but here we show how to use it in Rails 3 and mention some of the gotchas.</description>
+      <pubDate>Wed, 21 Nov 2012 20:08:05 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/390-turbolinks</guid>
+      <link>http://asciicasts.com/episodes/390-turbolinks</link>
+    </item>
+    <item>
+      <title>Cache Digests</title>
+      <description>The cache_digests gem (also included in Rails 4) will automatically add a digest to the fragment cache key based on the template. If a template changes the cache will auto-expire but there are traps we need to watch out for.</description>
+      <pubDate>Fri, 23 Nov 2012 18:38:54 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/387-cache-digests</guid>
+      <link>http://asciicasts.com/episodes/387-cache-digests</link>
+    </item>
+    <item>
+      <title>DataTables</title>
+      <description>DataTables makes it easy to convert a plain HTML table into one with pagination, sorting, and searching - all done with JavaScript and jQuery. Here we show how to set this up and use a Rails application as the data source.</description>
+      <pubDate>Fri, 02 Nov 2012 12:28:39 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/340-datatables</guid>
+      <link>http://asciicasts.com/episodes/340-datatables</link>
+    </item>
+    <item>
+      <title>Globalize3</title>
+      <description>Rails has great internationalization (I18n) support making it easy to translate static text into other languages, but how do we translate database content? Learn how using Globalize 3 in this episode.</description>
+      <pubDate>Fri, 02 Nov 2012 12:25:58 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/338-globalize3</guid>
+      <link>http://asciicasts.com/episodes/338-globalize3</link>
+    </item>
+    <item>
+      <title>Copycopter</title>
+      <description>Copycopter provides a nice interface that clients can use to edit the text in a Rails application. Learn how to deploy a Copycopter server using Heroku and integrate it in a Rails application through I18n.</description>
+      <pubDate>Fri, 02 Nov 2012 12:18:22 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/336-copycopter</guid>
+      <link>http://asciicasts.com/episodes/336-copycopter</link>
+    </item>
+    <item>
+      <title>Compass &amp;amp; CSS Sprites</title>
+      <description>Compass improves the Sass experience by providing useful mixins, functions, and more. You will also learn how to make CSS sprites with it in this episode.</description>
+      <pubDate>Fri, 02 Nov 2012 12:13:30 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/334-compass-css-sprites</guid>
+      <link>http://asciicasts.com/episodes/334-compass-css-sprites</link>
+    </item>
+    <item>
+      <title>Refinery CMS Basics</title>
+      <description>If you need to quickly create an informational site that can be easily edited, consider using a content management system. Here we show how to build a site using Refinery CMS.</description>
+      <pubDate>Fri, 02 Nov 2012 10:26:58 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/332-refinery-cms-basics</guid>
+      <link>http://asciicasts.com/episodes/332-refinery-cms-basics</link>
+    </item>
+    <item>
+      <title>Better SASS With Bourbon</title>
+      <description>If you are tired of the browser vendor prefixes in CSS, take a look at Bourbon. It provides Sass mixins and functions to make CSS more convenient.</description>
+      <pubDate>Sun, 11 Mar 2012 21:57:22 +0000</pubDate>
+      <guid>http://asciicasts.com/episodes/330-better-sass-with-bourbon</guid>
+      <link>http://asciicasts.com/episodes/330-better-sass-with-bourbon</link>
+    </item>
+  </channel>
+</rss>

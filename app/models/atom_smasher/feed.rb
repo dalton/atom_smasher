@@ -13,20 +13,20 @@ module AtomSmasher
     end
 
     def get_attributes_from_feed
-      @rss = SimpleRSS.parse(open(url))
+      @rss = ::SimpleRSS.parse(open(url))
       @title = @rss.title
     end
 
     def get_new_posts_from_feed
       recent_items = @rss.items
       recent_item = recent_items.shift
-      recent_post = posts.where(link: URI::encode(recent_item.link.strip)).first
+      recent_post = posts.where(link: ::URI::encode(recent_item.link.strip)).first
       until recent_post || !recent_item
         post = posts.build
-        post.link = URI::encode(recent_item.link.strip)
+        post.link = ::URI::encode(recent_item.link.strip)
         post.title = recent_item.title
-        source = open(URI::encode(recent_item.link.strip)).read
-        post.content = Readability::Document.new(source, tags: %w[], attributes: %w[]).content
+        source = open(::URI::encode(recent_item.link.strip)).read
+        post.content = ::Readability::Document.new(source, tags: %w[], attributes: %w[]).content
         recent_item = recent_items.shift
         recent_post = posts.where(link: recent_item.link).first if recent_item
       end

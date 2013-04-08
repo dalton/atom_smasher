@@ -28,7 +28,13 @@ group :assets do
   gem 'zurb-foundation', '~> 4'
 end
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+  gem 'capybara'
+  gem 'factory_girl_rails'
+end
+
 gem 'jquery-rails'
-gem "haml", ">= 3.1.6"
-gem "haml-rails", ">= 0.3.4", :group => :development
+gem "haml", ">= 4"
+gem "haml-rails", :group => :development
 gem 'quiet_assets', :group => :development
