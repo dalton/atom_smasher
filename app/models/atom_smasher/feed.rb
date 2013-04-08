@@ -1,6 +1,7 @@
 module AtomSmasher
   class Feed < ActiveRecord::Base
     has_many :posts, dependent: :destroy
+    has_many :subscriptions
     attr_accessible :url
     attr_reader :title
     after_find :get_info_from_stream

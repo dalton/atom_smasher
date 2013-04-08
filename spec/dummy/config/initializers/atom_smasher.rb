@@ -1,0 +1,1 @@
+AtomSmasher.reader_class = "User"
