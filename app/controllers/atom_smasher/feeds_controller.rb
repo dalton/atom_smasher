@@ -12,7 +12,7 @@ module AtomSmasher
     end
 
     def new
-      @feed = current_reader.feeds.new
+      @feed = current_reader.feeds.build
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @feed }
@@ -20,10 +20,11 @@ module AtomSmasher
     end
 
     def create
-      @feed = current_reader.feeds.new(params[:feed])
+      @feed = current_reader.feeds.build(params[:feed])
       respond_to do |format|
         if @feed.save
-          format.html { redirect_to feeds_path, notice: 'Experiment was successfully created.' }
+          current_reader.feeds << @feed
+          format.html { redirect_to @feed, notice: 'Experiment was successfully created.' }
           format.json { render json: @feed, status: :created, location: @feed }
         else
           format.html { render action: "new" }

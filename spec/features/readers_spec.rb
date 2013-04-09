@@ -20,4 +20,14 @@ describe "Readers" do
       page.should_not have_content unsubscribed_feed.title
     end
   end
+  describe "POST /atom_smasher/feeds" do
+    it "subscribes a reader to a feed" do
+      reader = User.create!(name: "Atom Smasher")
+      visit feeds_path
+      click_link "subscribe"
+      fill_in "URL", with: "./spec/fixtures/current_episodes.xml"
+      click_button "Subscribe"
+      page.should have_content "Guest User Record"
+    end
+  end
 end
