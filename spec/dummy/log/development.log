@@ -1,5 +1,0 @@
-Connecting to database specified by database.yml
-ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("atom_smasher_feeds")
-ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("atom_smasher_feeds")
-ActiveRecord::JDBCError: query does not return ResultSet: PRAGMA table_info("atom_smasher_feeds")
-Connecting to database specified by database.yml
