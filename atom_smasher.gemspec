@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = 'RSS and Atom Reader for JRuby.'
   s.description = 'Engine to add a RSS and Atom reader to your JRuby on Rails app.'
 
-  s.files = Dir['{app,config,db,lib}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.rdoc']
+  s.files = Dir['{app,config,db,lib}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.markdown']
   s.test_files = Dir['spec/**/*']
 
   s.add_dependency 'rails', '~> 3.2.13'

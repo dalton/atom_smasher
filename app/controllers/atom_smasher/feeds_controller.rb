@@ -4,15 +4,15 @@ require 'open-uri'
 module AtomSmasher
   class FeedsController < ApplicationController
     def index
-      @feeds = Feed.all
+      @feeds = current_reader.feeds.all
     end
     def show
-      @feeds = Feed.all
-      @feed = Feed.find(params[:id])
+      @feeds = current_reader.feeds.all
+      @feed = current_reader.feeds.find(params[:id])
     end
 
     def new
-      @feed = Feed.new
+      @feed = current_reader.feeds.new
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @feed }
@@ -20,7 +20,7 @@ module AtomSmasher
     end
 
     def create
-      @feed = Feed.new(params[:feed])
+      @feed = current_reader.feeds.new(params[:feed])
       respond_to do |format|
         if @feed.save
           format.html { redirect_to feeds_path, notice: 'Experiment was successfully created.' }

@@ -1,5 +1,5 @@
 module AtomSmasher
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ApplicationController
     layout 'atom_smasher/application'
   end
 end
