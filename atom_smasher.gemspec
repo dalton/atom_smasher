@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Adam Dalton']
   s.email       = ['adam.dalton@gmail.com']
   s.homepage    = 'http://www.github.com/dalton/atom_smasher'
-  s.summary     = 'RSS and Atom Reader for JRuby.'
+  s.summary     = 'RSS and Atom Reader for Ruby.'
   s.description = 'Engine to add a RSS and Atom reader to your JRuby on Rails app.'
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['MIT-LICENSE', 'Rakefile', 'README.markdown']
