@@ -1,6 +1,9 @@
 source "http://rubygems.org"
-ruby '1.9.3', engine: 'jruby', engine_version: '1.7.3'
+#ruby '1.9.3', engine: 'jruby', engine_version: '1.7.3'
 
+#gem 'activerecord-jdbcpostgresql-adapter'
+
+gem 'pg'
 
 # Declare your gem's dependencies in atom_smasher.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -16,7 +19,6 @@ gemspec
 # gem 'debugger'
 
 gem 'simple-rss'
-gem "ruby-readability", :require => 'readability'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

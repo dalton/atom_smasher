@@ -1,0 +1,14 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+.section-container section .title a, .section-container .section .title a, .section-container.auto section .title a, .section-container.auto .section .title a {
+  color: #333333;
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 0.9375em;
+  width: 100% !important;
+  white-space: normal !important;
+}
+

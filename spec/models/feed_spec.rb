@@ -8,7 +8,7 @@ describe AtomSmasher::Feed do
 
   it "should get the title from the feed" do
     feed = AtomSmasher::Feed.last
-    feed.title.should == "ASCIIcasts - Latest Episodes"
+    feed.title.should == "ASCIIcasts - Previous Episodes"
   end
 
   it "should update if a new item is posted" do

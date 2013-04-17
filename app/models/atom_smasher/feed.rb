@@ -12,30 +12,38 @@ module AtomSmasher
       get_new_posts_from_feed
     end
 
-    def item_content(item)
-      open(::URI::encode(item.link.strip)).read
-    end
     private
 
     def get_attributes_from_feed
-      @rss = ::SimpleRSS.parse(open(url))
-      @title = @rss.title
+      begin
+        @rss = ::SimpleRSS.parse(open(url))
+        @title = @rss.title
+      rescue Exception => e
+        Rails.logger.error e
+        Rails.logger.error "Could not get posts from feed"
+      end
+
     end
 
     def get_new_posts_from_feed
-      recent_items = @rss.items
-      recent_item = recent_items.shift
-      recent_post = posts.where(link: ::URI::encode(recent_item.link.strip)).first
-      until recent_post || !recent_item
-        post = posts.build
-        post.link = ::URI::encode(recent_item.link.strip)
-        post.title = recent_item.title
-        source = item_content(recent_item)
-        post.content = ::Readability::Document.new(source, tags: %w[], attributes: %w[]).content
+      begin
+        recent_items = @rss.items
         recent_item = recent_items.shift
-        recent_post = posts.where(link: recent_item.link).first if recent_item
+        recent_post = posts.where(link: ::URI::encode(recent_item.link.strip)).first
+        until recent_post || !recent_item
+          post = posts.build
+          post.link = ::URI::encode(recent_item.link.strip)
+          post.title = recent_item.title
+          post.content = recent_item.description
+
+          recent_item = recent_items.shift
+          recent_post = posts.where(link: recent_item.link).first if recent_item
+        end
+        save
+      rescue Exception => e
+        Rails.logger.error e
+        Rails.logger.error "Could not get posts from feed"
       end
-      save
     end
   end
 end
